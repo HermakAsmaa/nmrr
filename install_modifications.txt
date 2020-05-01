@@ -1,0 +1,17 @@
+Note : Install MongoDB and Redis in docker
+
+Redis 5.0 instalation in Docker :
+docker run --name redis -p 6378:6379 -d redis:5.0
+
+mongo:4.0.4 instalation in Docker :
+docker run -d -v C:/data2/db2:/data/db --name mongodb -p 27017:27017 mongo:3.4.1 --bind_ip_all
+
+create the users acounts then run the follow commands:
+docker stop mongodb
+docker rm mongodb
+docker run -d -v C:/data2/db2:/data/db --name mongodb -p 27017:27017 mongo:3.4.1 --bind_ip_all --auth
+
+
+
+
+
